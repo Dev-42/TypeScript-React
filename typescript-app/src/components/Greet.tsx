@@ -1,11 +1,12 @@
 type GreetProps = {
     name: string,
-    age: number
+    age: number,
+    isLogged: boolean
 }
 const Greet = (props : GreetProps) => {
   return (
     <div>
-      <h2>Welcome {props.name} your age is {props.age}</h2>
+      {props.isLogged ? <h2>Welcome {props.name} your age is {props.age}</h2> : <h2>Welcome Guest</h2>}
     </div>
   )
 }
